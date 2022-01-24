@@ -1,0 +1,357 @@
+<html lang="en" itemscope="" itemtype="https://schema.org/WebPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="generator" content="Hugo 0.54.0"><meta http-equiv="x-ua-compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#466BB0"><meta name="title" content="LogPAI"><meta name="description" content="Log Analytics Powered by AI."><meta name="keywords" content="logs,analysis,AI"><meta property="og:title" content="LogPAI"><meta property="og:type" content="website"><meta property="og:description" content="Log Analytics Powered by AI."><meta property="og:url" content="http://www.logpai.com">
+<title>LogPAI - Log Analytics Powered by AI</title>
+<link rel="shortcut icon" href="http://www.logpai.com/img/favicon.ico">
+
+<link rel="stylesheet" href="./las_ai/css">
+<!-- Bootstrap Core CSS -->
+<link href="./las_ai/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="./las_ai/all.css">
+
+<!-- Custom Fonts -->
+<link href="./las_ai/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="./las_ai/css(1)" rel="stylesheet" type="text/css">
+<link href="./las_ai/css(2)" rel="stylesheet" type="text/css">
+<style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
+@keyframes caretBlink {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+
+@keyframes rotateSpinner {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#text-tool-caret {
+    animation-name: caretBlink;  
+    animation-iteration-count: infinite;  
+    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    animation-duration: 1s; 
+}
+
+#en-markup-loading-spinner {
+    position: absolute;
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+    width: 32px;
+    height: 32px;
+}
+
+#en-markup-loading-spinner img {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    animation-name: rotateSpinner;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+</style><style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
+.skitchToastBoxContainer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    pointer-events: none;
+}
+
+.skitchToastBox {
+    width: 200px;
+    height: 16px;
+    padding: 12px;
+    background-color: rgba(47, 55, 61, 0.95);
+    border-radius: 4px;
+    color: white;
+    cursor: default;
+    font-size: 10pt;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.32);
+    font-family: 'Soleil', Helvetica, Arial, sans-serif;
+    border: 2px rgba(255, 255, 255, 0.38) solid;
+}
+
+.lang-zh-cn .skitchToastBox {
+    font-family: '微软雅黑', 'Microsoft YaHei', SimSun,
+        '&#x30E1;&#x30A4;&#x30EA;&#x30AA;', Meiryo, 'MS PGothic', 'Soleil',
+        Helvetica, Arial, sans-serif;
+}
+
+.lang-ja-jp .skitchToastBox {
+    font-family: '&#x30E1;&#x30A4;&#x30EA;&#x30AA;', Meiryo, 'MS PGothic',
+        '微软雅黑', 'Microsoft YaHei', SimSun, 'Soleil', Helvetica, Arial,
+        sans-serif;
+}
+
+.skitchToast {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    height: 10px;
+    color: #f1f5f8;
+    text-align: center;
+}
+
+.skitchVisible {
+    /* Don't remove this class it's a hack used by the Evernote Clipper */
+}
+</style><style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
+
+
+</style><style type="text/css">/* Copyright 2019-present Evernote Corporation. All rights reserved. */
+
+#en-markup-disabled {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    cursor: default;
+    -webkit-user-select: none;
+}
+
+#en-markup-alert-container {
+    position: absolute;
+    z-index: 9999;
+    width: 450px;
+    left: calc(50% - 225px);
+    top: calc(50% - 85px);
+    background-color: white;
+    box-shadow: 0 2px 7px 1px rgba(0,0,0,0.35);
+    -webkit-user-select: none;
+}
+
+
+#en-markup-alert-container .cell-2 {
+    position: relative;
+    float: left;
+    width: 345px;
+    margin-top: 29px;
+    margin-bottom: 20px;
+}
+
+#en-markup-alert-container .cell-2 .cell-2-title {
+    margin-bottom: 5px;
+    padding-right: 30px;
+    font-size: 12pt;
+    font-family: Tahoma, Arial;
+}
+
+#en-markup-alert-container .cell-2 .cell-2-message {
+    padding-right: 30px;
+    font-size: 9.5pt;
+    font-family: Tahoma, Arial;
+}
+
+#en-markup-alert-container .cell-3 {
+    position: relative;
+    width: 450px;
+    height: 60px;
+    float: left;
+    background-color: rgb(240,240,240);
+}
+
+#en-markup-alert-container .cell-3 button {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 110px;
+    height: 36px;
+}
+
+#en-markup-alert-container .cell-3 button.alt-button {
+    position: absolute;
+    top: 12px;
+    right: 140px;
+    width: 110px;
+    height: 36px;
+}
+</style></head>
+
+<body class="language-unknown" data-new-gr-c-s-check-loaded="14.1045.0" data-gr-ext-installed="">
+<header><nav><a id="brand" href="http://www.logpai.com/">
+<span class="logo">
+    <svg viewBox="0 0 300 300"><circle cx="150" cy="150" r="146" stroke-width="2"></circle><path d="M60 220L130 60 h70 L130 220 z"></path><path d="M120 220 h110 l25 -50 h-110z"></path></svg>
+</span>
+<span class="name">LAS_AI</span></a>
+<div id="hamburger">
+<svg class="icon"><use xlink:href="https://istio.io/img/icons.svg#hamburger"></use></svg></div>
+</nav></header>
+
+
+<section id="platform"><main class="landing">
+
+
+<div class="col-md-6 col-md-offset-3">
+        <img src="./las_ai/home_1.gif" alt="">
+    </div><div class="container">
+<div class="row">
+    
+</div></div>
+<br><br><br>
+
+<h1 class="section-heading">Latin America Big Data Analytics Powered by AI
+                    <hr class="section-heading-spacer"></h1><div id="panels">
+<div id="panel1" class="panel" style="opacity: 1;"><a href="https://github.com/logpai/loghub"><div class="panel-img-top"><svg class="landing-image" viewBox="0 0 1200 900"><defs><style>.cls-1,.cls-2,.cls-3,.cls-4{fill:none;stroke-miterlimit:10}.cls-1{stroke:#000}.cls-1,.cls-3,.cls-4{stroke-width:10px}.cls-2{stroke-width:30px}.cls-3{stroke:#64c489}.cls-4{stroke:#476baf}.cls-5{fill:#476baf}.cls-6{fill:#64c489}</style></defs><circle cx="149.5" cy="149.5" r="50"></circle><circle cx="149.5" cy="750.5" r="50"></circle><path d="M240 120l-30 30 30 30V120z"></path><path d="M240 720l-30 30 30 30V720z"></path><path class="cls-1" d="M250 150c2e2.0 5e2 3e2 7e2 3e2"></path><path class="cls-1" d="M250 750c2e2.0 499-3e2 7e2-3e2"></path><path class="cls-1" d="M250 750H950z"></path><path class="cls-1" d="M250 150H950z"></path><path class="cls-2" d="M950 150c-2e2.0-5e2 3e2-7e2 3e2"></path><path class="cls-2" d="M950 750c-2e2.0-499-3e2-7e2-3e2"></path><path class="cls-2" d="M250 450H950z"></path><path class="cls-3" d="M340 450H950z"></path><path class="cls-4" d="M950 150c-2e2.0-5e2 3e2-7e2 3e2"></path><path class="cls-4" d="M950 750c-2e2.0-499-3e2-7e2-3e2"></path><circle class="cls-5" cx="149.5" cy="449.5" r="50"></circle><circle class="cls-5" cx="1050.5" cy="149.5" r="50"></circle><circle class="cls-5" cx="1050.5" cy="750.5" r="50"></circle><circle class="cls-6" cx="1050.5" cy="449.5" r="50"></circle><path class="cls-5" d="M240 420l-30 30 30 30V420z"></path><path class="cls-6" d="M960 480l30-30-30-30v60z"></path><path class="cls-5" d="M960 180l30-30-30-30v60z"></path><path class="cls-5" d="M960 780l30-30-30-30v60z"></path></svg></div>
+<div class="panel-body"><hr class="panel-line"><h5 class="panel-title">LAS_HUB</h5><hr class="panel-line"><p class="panel-text">A large collection of China Latin datasets for AI-powered analytics.</p></div></a></div>
+
+<div id="panel2" class="panel" style="opacity: 1;"><a href="https://github.com/logpai/logparser"><div class="panel-img-top"><svg class="landing-image" viewBox="0 0 1200 900"><defs><style>.r-1,.r-3,.r-4{fill:none;stroke-miterlimit:10;stroke-width:10px}.r-1{stroke:#000}.r-2{fill:#476baf}.r-3{stroke:#64c489}.r-4{stroke:#476baf}</style></defs><path d="M1e2 277.57V320H142.43L1e2 277.57z"></path><path d="M210 587.57V630H252.43L210 587.57z"></path><path d="M890.5 329.07V371.5H932.93L890.5 329.07z"></path><path d="M1e2 795c84.32-10.77 165-40.47 241.15-77.37C476.51 652 603.47 561.86 751.25 525.42c117.73-29 287.93-22.63 349.46 102 2.07 4.19 3.6 8.49 5.42 12.77l-6.64 3.86c-36.75-34.34-82.24-55.82-131.45-65.17-53.63-10.2-108.94-7-162.24 3.64-50.57 10.12-99.64 26.81-147.29 46.36C574.75 663.27 494.88 706.24 411.75 742c-82 35.28-168.81 63.89-258.89 65.28A468 468 0 0 1 95 804.45v-8.86C96.67 795.4 98.33 795.19 1e2 795z"></path><path class="r-1" d="M1e2 650s57.21 62.93 150 93.6"></path><path class="r-1" d="M129.95 290.92 320.87 1e2z"></path><path class="r-1" d="M7e2 141.13 741.13 1e2z"></path><path class="r-1" d="M240 6e2 590 251.1z"></path><path class="r-1" d="M920 340.13l180-181z"></path><path class="r-2" d="M560.21 510.56 682.41 461.91 630.82 237.77 560.21 510.56z"></path><path class="r-2" d="M692.15 459.66 872.05 438.78 604.68 79.6 692.15 459.66z"></path><path class="r-2" d="M714.75 524.54c16.31-5 32.76-9.5 49.56-13.38l110-62.63L562.45 520.3l97 23.49C677.6 536.77 696 530.3 714.75 524.54z"></path><path class="r-2" d="M296 282.57V325H338.43L296 282.57z"></path><path class="r-2" d="M450.5 557.07V599.5H492.93L450.5 557.07z"></path><path class="r-3" d="M477 8e2c1e2-30 211-101.14 330-124 250-48 293 102 293 102"></path><path class="r-3" d="M100.43 520.43 240.87 380z"></path><path class="r-4" d="M325.5 294.5 520 1e2z"></path><path class="r-3" d="M800.13 249.13 950.02 1e2z"></path><path class="r-4" d="M481 569 520.33 530.33z"></path><path class="r-4" d="M1004.63 474.63l94.88-95.12z"></path></svg></div><div class="panel-body"><hr class="panel-line"><h5 class="panel-title">LAS_Analyser</h5><hr class="panel-line"><p class="panel-text">A toolkit for automated las-related analysis.</p></div></a></div>
+
+<div id="panel3" class="panel" style="opacity: 1;"><a href="https://github.com/logpai/loglizer"><div class="panel-img-top"><svg class="landing-image" viewBox="0 0 1200 900"><defs><style>.p-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:10px}.p-2{fill:#476baf}.p-3{fill:#64c489}</style></defs><path d="M390 480l30-30-30-30v60z"></path><path class="p-1" d="M380 450H1e2z"></path><path class="p-1" d="M380 580c-110 0-180 220-280 220"></path><path d="M1070 480l30-30-30-30v60z"></path><path class="p-1" d="M790 450h270z"></path><path class="p-1" d="M790 320h270z"></path><path class="p-1" d="M790 580h270z"></path><path d="M1069 610l30-30-30-30v60z"></path><path d="M390 610l30-30-30-30v60z"></path><path d="M390 350l30-30-30-30v60z"></path><path class="p-1" d="M380 320c-110 0-180-219.46-280-219.46"></path><path d="M1069.5 350l30-30-30-30v60z"></path><path d="M455.37 455v72.52c0 85.52 114.17 133 139.63 142.57V455z"></path><path class="p-2" d="M595 445V202.77L455.37 280V445z"></path><path d="M744.6 445c0-82.16-.1-165.19-.1-165.19L605 202.76V445z"></path><path class="p-3" d="M605 455V670.09c25.46-9.53 139.63-57.05 139.63-142.57v-.26c0-22 0-46.94.0-72.26z"></path></svg></div>
+<div class="panel-body"><hr class="panel-line"><h5 class="panel-title">LAS_Visualization</h5><hr class="panel-line"><p class="panel-text">A log analysis toolkit for automated research </p></div></a></div>
+
+
+
+</div>
+
+<div id="buttons" style="opacity: 1">
+<a title="Loghub datasets are available for downloading." class="btn" href="https://doi.org/10.5281/zenodo.1144100">DOWNLOAD DATASETS</a>
+<a title="Learn more about LogPAI projects." class="btn" href="https://github.com/logpai">FOLLOW GITHUB REPO</a>
+</div>
+</main></section>
+
+<section id="publication" class="bg-light-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    
+                    <h1 class="section-heading">PUBLICATIONS
+                    <hr class="section-heading-spacer"></h1><div class="clearfix"></div>
+                    <ul>
+                        <li>
+                            <p>[<strong>ASE'19</strong>] Jinyang Liu, Jieming Zhu, Shilin He, Pinjia He, Zibin Zheng, Michael R. Lyu. <a target="_blank" href="https://jiemingzhu.github.io/pub/jyliu_ase2019.pdf">Logzip: Extracting Hidden Structures via Iterative Clustering for Log Compression</a>, <em>in Proc. of IEEE/ACM International Conference on Automated Software Engineering (ASE)</em>, 2019.</p>
+                        </li>
+            <li>
+                            <p>[<strong>ICSE'19</strong>] Jieming Zhu, Shilin He, Jinyang Liu, Pinjia He, Qi Xie, Zibin Zheng, Michael R. Lyu. <a target="_blank" href="https://arxiv.org/pdf/1811.03509.pdf">Tools and Benchmarks for Automated Log Parsing</a>, <em>in Proc. of International Conference on Software Engineering (ICSE)</em>, 2019.</p>
+                        </li>
+                        <li>
+                            <p>[<strong>FSE'18</strong>] Shilin He, Qingwei Lin, Jian-Guang Lou, Hongyu Zhang, Michael R.Lyu, Dongmei Zhang. <a target="_blank" href="https://dl.acm.org/citation.cfm?id=3236083">Identifying Impactful Service System Problems via Log Analysis</a>, <em> in Proc. of the 26th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE)</em>, 2018.</p>
+                        </li>
+                        
+                        
+                         
+                         
+                         
+                                        
+                                                      
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+</section>
+
+
+
+<section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h1 class="section-heading">TEAM
+                    <hr class="section-heading-spacer"></h1>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-lg-11 col-lg-offset-1"> -->
+                    <div class="col-sm-2 col-sm-offset-1">
+                        <div class="team-member">
+                            <img src="./las_ai/dmCai.png" class="img-responsive img-circle" alt="">
+                            <a target="_blank" href="http://www.cse.cuhk.edu.hk/lyu/">Dongman Cai</a>
+                            <p class="text-muted">Postdoc, GDUFS<br>Phd., University of Leeds </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="team-member">
+                            <img src="./las_ai/Professor_Zhu_Wenzhong.png" class="img-responsive img-circle" alt="">
+                            <a target="_blank" href="https://jiemingzhu.github.io/">Wenzhong Zhu</a>
+                            <p class="text-muted">Prof, GDUFS<br>Head of School of Business, GDUFS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-2">
+                        <div class="team-member">
+                            <img src="./las_ai/pjhe.jpg" class="img-responsive img-circle" alt="">
+                            <a target="_blank" href="https://pinjiahe.github.io/">Pinjia He</a>
+                            <p class="text-muted">Assistant Prof, CUHK<br>Postdoc, ETH<br>Ph.D., CUHK</p>
+                        </div>
+                    </div><div class="col-sm-2">
+                        <div class="team-member">
+                            <img src="./las_ai/jbFu.png" class="img-responsive img-circle" alt="">
+                            <a target="_blank" href="https://github.com/SCUT-CCNL">Jiabing Fu</a>
+                            <p class="text-muted">Ph.D., SCUT</p>
+                        </div>
+                    </div>
+                    
+                <div class="col-sm-2">
+                        <div class="team-member">
+                            <img src="./las_ai/slhe.jpg" class="img-responsive img-circle" alt="">
+                            <a target="_blank" href="https://shilinhe.github.io/">Cheng Hu</a>
+                            <p class="text-muted">Postdoc, GZHU<br>Ph.D., University of Lincoin</p>
+                        </div>
+                    </div><!-- </div> -->
+            </div>     
+        </div>
+</section>
+
+<section id="adv-board" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h1 class="section-heading">Adivsory Board
+                    <hr class="section-heading-spacer"></h1>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-lg-11 col-lg-offset-1"> -->
+                    
+                    
+                    <div class="col-sm-2 col-sm-offset-1">
+                        <div class="team-member">
+                            <img src="./las_ai/Professor_Alice_Deignan.png" class="img-responsive img-circle" alt="">
+                            <a target="_blank" href="https://pinjiahe.github.io/">Alice Deignan</a>
+                            <p class="text-muted">Prof, University of Leeds<br>Head of School of Education</p>
+                        </div>
+                    </div>
+                    
+                    
+                <!-- </div> -->
+            </div>     
+        </div>
+</section><section id="sponsors" class="bg-light-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h1 class="section-heading">SPONSORS
+                    <hr class="section-heading-spacer"></h1>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-lg-11 col-lg-offset-1"> -->
+                    <div class="col-sm-2 col-sm-offset-2">
+                            <a href="http://www.nopss.gov.cn/"><img src="./las_ai/huawei.png" alt=""></a>
+                            <br>
+                    </div>
+                    <div class="col-sm-2">
+                            <a href="http://www.nsfc.gov.cn/english/site_1/index.html"><img src="./las_ai/nsfc.png" alt=""></a>
+                            <br>
+                    </div>
+
+            </div>
+        </div>
+</section>
+
+<footer>
+<div class="info"><p class="copyright">Latin America Big Data Analytics Powered by AI<br>©2022 LAS_AI TEAM<br>Theme copied from <a href="https://istio.io/">Istio.io</a></p></div>
+</footer>
+
+<audio controls="controls" style="display: none;"></audio><style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></body></html>
